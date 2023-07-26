@@ -293,6 +293,7 @@ namespace OpenRA
 
 		public static void InitializeSettings(Arguments args)
 		{
+			// ~/Library/Application Support/OpenRA
 			Settings = new Settings(Path.Combine(Platform.SupportDir, "settings.yaml"), args);
 		}
 

@@ -47,9 +47,13 @@ namespace OpenRA
 					{
 						// HACK: The linter does not want to crash when a trait doesn't exist but only print an error instead
 						// LoadTraitInfo will only return null to signal us to abort here if the linter is running
+
 						var trait = LoadTraitInfo(creator, t.Key, t.Value);
 						if (trait != null)
+						{
+							// Console.WriteLine($"acti {name}: \t{t.Key}: {t.Value}");
 							traits.Add(trait);
+						}
 					}
 					catch (FieldLoader.MissingFieldsException e)
 					{
